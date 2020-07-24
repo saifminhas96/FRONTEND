@@ -7,10 +7,13 @@ class MovieCard extends React.Component {
       <Card>
         <div>
           <div className="poster">
-            <img alt="poster" />
+            <img alt="poster" src={this.props.movie.poster} />
             <div />
             <div className="content">
-              <div className="header">{this.props.title}</div>
+              <div className="header">{this.props.movie.title}</div>
+              <button onClick={() => this.props.selectMovie(this.props.movie)}>
+                Movie Details
+              </button>
             </div>
           </div>
         </div>

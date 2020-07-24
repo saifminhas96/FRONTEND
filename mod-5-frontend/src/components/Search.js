@@ -2,7 +2,7 @@ import React from "react";
 
 const Search = (props) => {
   return (
-    <div className="ui large fluid icon input">
+    <form className="ui large fluid icon input" onSubmit={props.submitSearch}>
       <input
         type="text"
         placeholder="Search..."
@@ -10,8 +10,10 @@ const Search = (props) => {
         value={props.userSearch}
       />
 
-      <i className="circular search link icon"></i>
-    </div>
+      <button>
+        <i className="circular search link icon"></i>
+      </button>
+    </form>
   );
 };
 

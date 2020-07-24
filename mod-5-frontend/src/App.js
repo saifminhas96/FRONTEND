@@ -1,5 +1,5 @@
 import React from "react";
-import Homepage from "./components/Homepage";
+import Content from "./components/Content";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Menu } from "semantic-ui-react";
 import LoginForm from "./components/LoginForm";
@@ -15,8 +15,8 @@ const App = () => (
           <Menu.Item name="Sign In" as={Link} to="/loginform" />
         </Menu>
       </div>
-      <Route path="/homepage" component={Homepage} />
-      <Route path="/loginform" component={LoginForm} />
+      <Route path="/homepage" render={(routerProps) => <Content />} />
+      <Route path="/loginform" render={(routerProps) => <LoginForm />} />
     </div>
   </Router>
 );
