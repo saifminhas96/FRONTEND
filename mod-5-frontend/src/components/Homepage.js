@@ -44,7 +44,22 @@ class Homepage extends React.Component {
   render() {
     return (
       <Container>
-        <h1>Movie Database</h1>
+        <h1>The Movie Database</h1>
+        <img
+          src={
+            "https://cdn.dribbble.com/users/1866105/screenshots/6537273/s_film_logo_final.jpg"
+          }
+          alt="My logo"
+          height={"210px"}
+          width={"210px"}
+        />
+
+        <h4>Welcome to the movie database.</h4>
+        <h4>
+          Please enter the name of the movie you would like to search for to get
+          started.
+        </h4>
+
         <br />
         <Search
           updateUserSearch={this.updateUserSearch}

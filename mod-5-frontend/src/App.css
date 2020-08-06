@@ -1,38 +1,56 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template:
+    "navbar navbar navbar" 4em
+    "...... main   ......" 1fr
+    / 1fr 10fr 1fr;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div#navbar-container {
+  grid-area: navbar;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+div#main-container {
+  grid-area: main;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+div#movie-show-top {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template:
+    "details reviews " 1fr
+    "details reviews" auto
+    / 1fr 1fr;
+}
+
+div#movie-details {
+  grid-area: details;
+}
+
+div#movie-show-bottom {
+  grid-area: reviews;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+div#movie-show-top {
+  display: grid;
+}
+body {
+  background-color: lightsteelblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ui.search > .search-bar + .results {
+  position: relative;
+  margin: 0 auto;
+}
+
+div.ui.pointing.secondary.menu {
+  background-color: white;
+}
+
+div.movie.details {
+  background-color: white;
 }

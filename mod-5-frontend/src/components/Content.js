@@ -19,7 +19,7 @@ class Content extends React.Component {
     this.setState({ selectedMovie: movie });
   };
   render() {
-    return <div>{this.renderContent()}</div>;
+    return this.renderContent();
   }
 }
 

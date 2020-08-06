@@ -4,7 +4,7 @@ import MovieCard from "./MovieCard";
 
 class MovieCollection extends React.Component {
   renderMovieCards = () => {
-    if (!this.props.movies.length)
+    if (!this.props.movies.length < 0)
       return <div>Sorry! But we can't find a movie by that name!</div>;
 
     return this.props.movies.map((m) => (
@@ -12,6 +12,7 @@ class MovieCollection extends React.Component {
         selectMovie={this.props.selectMovie}
         key={m.id}
         movie={{
+          id: m.imdbID,
           title: m.Title,
           poster: m.Poster,
           year: m.Year,
